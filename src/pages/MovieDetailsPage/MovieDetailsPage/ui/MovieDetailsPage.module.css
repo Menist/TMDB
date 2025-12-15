@@ -1,0 +1,45 @@
+.movieDetailsSection {
+  width: 100%;
+}
+
+.movieDetailTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+  width: 100%;
+}
+
+.movieDetailGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  width: 100%;
+  min-width: 100%;
+}
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.backButton {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  max-width: 100px;
+  font-size: 1em;
+  font-weight: 500;
+  background: linear-gradient(135deg, #e50914 0%, #b2070f 100%);
+  cursor: pointer;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.backButton:hover {
+  background: #ffd700;
+  color: black;
+}

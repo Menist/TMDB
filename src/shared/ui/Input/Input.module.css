@@ -1,0 +1,26 @@
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gray-2);
+  border-radius: 8px;
+  background: var(--card-background);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.input::placeholder {
+  color: var(--gray-5);
+}
+@media (max-width: 768px) {
+  .input {
+    padding: 0.875rem 1.25rem;
+  }
+
+}

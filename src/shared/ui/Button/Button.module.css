@@ -1,0 +1,42 @@
+
+.button {
+  padding: 1rem 1rem;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:disabled {
+  background: var(--gray-2);
+  color: var(--gray-5);
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.button:disabled:hover {
+  background: var(--gray-2);
+  color: var(--gray-5);
+  transform: none !important;
+}
+
+.button:hover {
+  background: #ffd700;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+
+  .button {
+    padding: 0.875rem 1.5rem;
+  }
+}

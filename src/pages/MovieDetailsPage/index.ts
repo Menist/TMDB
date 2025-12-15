@@ -1,0 +1,1 @@
+export * from './MovieDetailsPage/ui/MovieDetailsPage'

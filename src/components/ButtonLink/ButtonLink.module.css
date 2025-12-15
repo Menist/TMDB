@@ -1,0 +1,40 @@
+.button {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding:.5rem .5rem;
+  background: transparent;
+  color: var(--text-color);;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid #e50914;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.button:hover {
+  background: #ffd700;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+.button.active {
+  background-color: #e50914 ;
+  color: white;
+  border-color: #e50914;
+  box-shadow: 0 4px 20px rgba(229, 9, 20, 0.5);
+}
+
+.button.active:hover {
+  background: #ffd700;
+  color: black;
+  border-color: #ffd700;
+}

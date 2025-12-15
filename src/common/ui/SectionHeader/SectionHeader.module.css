@@ -1,0 +1,18 @@
+.sectionHeader {
+  margin: 0;
+  /*font-size: 1.8rem;*/
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    /*font-size: 1.5rem;*/
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionHeader {
+    /*font-size: 1.3rem;*/
+  }
+}

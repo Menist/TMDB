@@ -1,0 +1,1 @@
+export {NowPlayingMovies} from './NowPlayingMovies'

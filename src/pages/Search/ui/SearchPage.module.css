@@ -1,0 +1,109 @@
+.container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--gray-2);
+  border-radius: 8px;
+  background: var(--card-background);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.input::placeholder {
+  color: var(--gray-5);
+}
+
+.button {
+  padding: 0.75rem 2rem;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+
+.button:disabled {
+  background: var(--gray-2);
+  color: var(--gray-5);
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.button:disabled:hover {
+  background: var(--gray-2);
+  color: var(--gray-5);
+  transform: none !important;
+}
+
+.button:hover {
+  background: #ffd700;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.message {
+  color: var(--gray-4);
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .button {
+    padding: 0.875rem;
+  }
+}

@@ -1,0 +1,25 @@
+.movieSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  max-width: 1370px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .movieSection {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movieSection {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+}

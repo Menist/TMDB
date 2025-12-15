@@ -1,0 +1,145 @@
+.welcomeBlock {
+  position: relative;
+  min-height: 50vh; /* Уменьшили высоту */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--text-color);
+  text-align: center;
+  overflow: hidden;
+}
+
+.welcomeBlock::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.45) 50%,
+      rgba(0, 0, 0, 0.65) 100%
+  );
+  z-index: 1;
+}
+
+.welcomeBlock::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+}
+
+.welcomeBlock > * {
+  position: relative;
+  z-index: 2;
+}
+
+.welcomeBlock h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  background: linear-gradient(90deg, #ffd700 43%, #e50914 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.welcomeBlock p {
+  font-size: 1.3rem;
+  margin: 0 0 1.5rem 0;
+  color: var(--text-color);
+  font-weight: 300;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .welcomeBlock {
+    min-height: 35vh;
+    padding: 2rem 1rem;
+  }
+
+  .welcomeBlock h1 {
+    font-size: 2.2rem;
+  }
+
+  .welcomeBlock p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .searchForm {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcomeBlock {
+    min-height: 30vh;
+    padding: 1.5rem 1rem;
+  }
+
+  .welcomeBlock h1 {
+    font-size: 1.8rem;
+  }
+
+  .welcomeBlock p {
+    font-size: 1rem;
+    margin-bottom: 1.3rem;
+  }
+}
+
+.theme-light .welcomeBlock::before {
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.07) 50%,
+      rgba(255, 255, 255, 0.15) 100%
+  );
+}
+
+.theme-light .welcomeBlock::after {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+  );
+}
+
+.theme-light .welcomeBlock p {
+  color: var(--gray-1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.theme-light .input {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--gray-2);
+}
+
+.theme-light .input:focus {
+  background: rgba(255, 255, 255, 0.98);
+}
