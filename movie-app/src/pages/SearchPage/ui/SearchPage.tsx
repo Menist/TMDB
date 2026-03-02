@@ -61,6 +61,7 @@ export const SearchPage = () => {
             value={inputValue}
             onChange={inputHandler}
             type='search'
+            aria-label='Название фильма для поиска'
           />
         </div>
         <Button className={s.searchButton} disabled={inputValue.trim() === ''}>
