@@ -63,9 +63,9 @@ export const SearchPage = () => {
             type='search'
           />
         </div>
-        <button className={s.searchButton} disabled={inputValue.trim() === ''}>
+        <Button className={s.searchButton} disabled={inputValue.trim() === ''}>
           Поиск
-        </button>
+        </Button>
       </form>
 
       {q.trim() !== '' && isFetching && !isFetchingNextPage ? (
