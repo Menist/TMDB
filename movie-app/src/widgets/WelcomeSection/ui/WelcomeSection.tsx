@@ -41,14 +41,15 @@ export const WelcomeSection = () => {
       <div className={s.welcomeSectionTextWrap}>
         <h1>Welcome</h1>
         <p>Browse highlighted titles from TMDB</p>
-        <form className={s.searchForm} onSubmit={handleSubmit}>
+        <form className={s.searchForm} onSubmit={handleSubmit} aria-label="Поиск фильмов">
           <Input
             type='search'
             placeholder='Поиск фильмов...'
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Поисковый запрос"
           />
-          <Button disabled={searchQuery.trim() === ''}>Search</Button>
+          <Button aria-label="Найти фильмы" disabled={searchQuery.trim() === ''}>Search</Button>
         </form>
       </div>
     </div>
