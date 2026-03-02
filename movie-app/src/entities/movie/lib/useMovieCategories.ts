@@ -44,7 +44,6 @@ export const useMovieCategories = () => {
   const allUpcomingMovies = upcoming?.pages.flatMap(page => page.results) || []
   const allNowPlayingMovies = nowPlaying?.pages.flatMap(page => page.results) || []
 
-  // Возвращаем объект
   return {
     popular: {
       data: popular,
