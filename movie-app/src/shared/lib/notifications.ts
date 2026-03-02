@@ -11,7 +11,6 @@ export const showErrorToast = (error: FetchBaseQueryError | SerializedError | un
   }
 
   if ('status' in error) {
-    // Пытаемся получить сообщение из data, если это HTTP ошибка
     const apiErrorMessage = (error.data as { message?: string })?.message
 
     switch (error.status) {
