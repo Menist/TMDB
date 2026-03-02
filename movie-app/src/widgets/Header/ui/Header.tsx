@@ -47,7 +47,6 @@ export const Header = () => {
             </svg>
           </NavLink>
 
-          {/* Десктопная навигация */}
           <nav className={s.navigate}>
             <ul>
               {navLinks.map(link => (
@@ -63,7 +62,6 @@ export const Header = () => {
             </ul>
           </nav>
 
-          {/* ПРАВАЯ ГРУППА - кнопка темы и бургер */}
           <div className={s.rightGroup}>
             <Button
               onClick={handlerBtnTheme}
@@ -83,7 +81,6 @@ export const Header = () => {
             </button>
           </div>
 
-          {/* Мобильное меню */}
           <nav className={`${s.mobileMenu} ${isMenuOpen ? s.mobileMenuOpen : ''}`}>
             <ul>
               {navLinks.map(link => (
