@@ -1,0 +1,28 @@
+.favoriteIconSvg {
+  flex-shrink: 0;
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+}
+
+.noBorderButton {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.favoriteIconSvg:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+  .favoriteIconSvg {
+    min-width: 16px;
+    min-height: 16px;
+    width: 16px;
+    height: 16px;
+  }
+}

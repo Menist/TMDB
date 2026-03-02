@@ -1,0 +1,103 @@
+.searchPage {
+  padding: var(--spacing-2xl) var(--spacing-md);
+  max-width: var(--screen-xl);
+  margin: 0 auto;
+}
+
+.searchForm {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-2xl);
+  align-items: center;
+}
+
+.searchInput {
+  flex: 1;
+}
+
+.searchButton {
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: 500;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  height: 48px;
+  white-space: nowrap;
+}
+
+.searchButton:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.searchButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  text-align: center;
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  padding: var(--spacing-3xl) var(--spacing-md);
+}
+
+.moviesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  list-style: none;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.loadingMore {
+  text-align: center;
+  padding: var(--spacing-lg);
+  color: var(--accent);
+  font-size: var(--text-base);
+}
+
+@media (max-width: 768px) {
+  .searchPage {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .searchForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchButton {
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-md);
+  }
+
+  .moviesList {
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+
+  .message {
+    font-size: var(--text-base);
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .moviesList {
+    gap: var(--spacing-sm);
+  }
+
+  .loadingMore {
+    font-size: var(--text-sm);
+  }
+}

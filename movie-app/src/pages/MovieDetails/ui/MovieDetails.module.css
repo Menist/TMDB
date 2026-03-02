@@ -1,0 +1,315 @@
+.detailsPage {
+  padding: var(--spacing-2xl) var(--spacing-md);
+  max-width: var(--screen-lg);
+  margin: 0 auto;
+}
+
+.prevBtn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: var(--spacing-lg);
+}
+
+.mainInfo {
+  display: flex;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.poster {
+  flex-shrink: 0;
+  width: 300px;
+  position: relative;
+}
+
+.poster img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.favoriteButton {
+  position: absolute;
+  right: var(--spacing-sm);
+  top: var(--spacing-sm);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  /*background-color: rgba(10, 10, 20, 0.8);*/
+  backdrop-filter: blur(4px);
+  transition: all var(--transition-fast);
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.favoriteButton:hover {
+  background-color: rgba(10, 10, 20, 0.95);
+  transform: scale(1.1);
+}
+
+.info {
+  flex: 1;
+}
+
+.info h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--text-primary);
+}
+
+.tagline {
+  font-size: var(--text-lg);
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: var(--spacing-lg);
+}
+
+.genres {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-lg);
+}
+
+.genres p {
+  background-color: rgba(0, 212, 255, 0.1);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  margin: 0;
+  transition: all var(--transition-fast);
+}
+
+.genres p:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.meta {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.overview {
+  font-size: var(--text-base);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-xl);
+}
+
+.actors {
+  margin-top: var(--spacing-3xl);
+}
+
+.actors h2 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.castList {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  scroll-behavior: smooth;
+}
+
+.castList::-webkit-scrollbar {
+  height: 8px;
+}
+
+.castList::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.castList::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.actorCard {
+  flex-shrink: 0;
+  width: 150px;
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.actorCard:hover {
+  transform: translateY(-4px);
+}
+
+.actors img {
+  width: 150px;
+  height: 225px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-md);
+}
+
+.actorPlaceholder {
+  width: 150px;
+  height: 225px;
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  margin-bottom: var(--spacing-md);
+}
+
+.actors p {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.actors p:first-of-type {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.actors p:last-of-type {
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+
+.similarMovies {
+  margin-top: var(--spacing-3xl);
+}
+
+.similarMovies h2 {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.similarMovies ul {
+  display: flex;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.similarMovies ul::-webkit-scrollbar {
+  height: 8px;
+}
+
+.similarMovies ul::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.similarMovies ul::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.similarMovies li {
+  flex-shrink: 0;
+}
+
+/* Медиа-запросы с учетом кнопки избранного */
+@media (max-width: 1024px) {
+  .poster {
+    width: 250px;
+  }
+
+  .actors img,
+  .actorPlaceholder {
+    width: 120px;
+    height: 180px;
+  }
+
+  .actorCard {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .detailsPage {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .mainInfo {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .poster {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .info h1 {
+    font-size: var(--text-3xl);
+  }
+
+  .meta {
+    gap: var(--spacing-md);
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .info h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .tagline {
+    font-size: var(--text-base);
+  }
+
+  .genres p {
+    font-size: var(--text-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .actors h2,
+  .similarMovies h2 {
+    font-size: var(--text-2xl);
+  }
+
+  .actors img,
+  .actorPlaceholder {
+    width: 100px;
+    height: 150px;
+  }
+
+  .actorCard {
+    width: 100px;
+  }
+
+  /* Адаптация кнопки для мобильных */
+  .favoriteButton {
+    width: 32px;
+    height: 32px;
+  }
+
+  .favoriteButton svg {
+    width: 16px;
+    height: 16px;
+  }
+}

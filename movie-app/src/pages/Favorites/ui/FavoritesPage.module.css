@@ -1,0 +1,62 @@
+.favoritesPage {
+  padding: var(--spacing-2xl) var(--spacing-md);
+  max-width: var(--screen-xl);
+  margin: 0 auto;
+}
+
+.favoritesPage h1 {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
+}
+
+.moviesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.moviesList li {
+  flex-shrink: 0;
+}
+
+.emptyMessage {
+  text-align: center;
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  padding: var(--spacing-3xl) var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .favoritesPage {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .favoritesPage h1 {
+    font-size: var(--text-3xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .moviesList {
+    gap: var(--spacing-md);
+    justify-content: center;
+  }
+
+  .emptyMessage {
+    font-size: var(--text-base);
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .favoritesPage h1 {
+    font-size: var(--text-2xl);
+  }
+
+  .moviesList {
+    gap: var(--spacing-sm);
+  }
+}

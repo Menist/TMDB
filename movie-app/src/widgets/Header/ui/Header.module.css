@@ -1,0 +1,247 @@
+.header {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color var(--transition-base);
+}
+
+.headerWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--screen-xl);
+  margin: 0 auto;
+}
+
+.logo {
+  width: 145px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.logoSvg {
+  fill: var(--accent);
+  transition: fill var(--transition-fast);
+}
+
+.logo:hover .logoSvg {
+  fill: var(--accent-hover);
+}
+
+/* НОВЫЙ КОНТЕЙНЕР ДЛЯ ПРАВОЙ ГРУППЫ */
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.navigate ul {
+  display: flex;
+  gap: var(--spacing-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigate a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: var(--text-xl);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid transparent;
+}
+
+.navigate a:hover {
+  color: var(--accent);
+}
+
+.active {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+
+.themeButton {
+  flex-shrink: 0;
+  padding: var(--spacing-sm);
+  min-width: 40px; /* Для удобного нажатия на мобильных */
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.themeButton:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.burgerButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+  flex-shrink: 0;
+}
+
+.burgerLine {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-base);
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-xl);
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  transition: right var(--transition-base);
+  z-index: 101;
+  overflow-y: auto;
+}
+
+.mobileMenuOpen {
+  right: 0;
+}
+
+.mobileMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.mobileMenu a {
+  display: block;
+  padding: var(--spacing-md);
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-md);
+}
+
+.mobileMenu a:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--accent);
+}
+
+.mobileMenu::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+  z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .navigate ul {
+    gap: var(--spacing-lg);
+  }
+
+  .navigate a {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: var(--spacing-md);
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .navigate {
+    display: none;
+  }
+
+  .burgerButton {
+    display: flex;
+  }
+
+  /* Убираем order и используем rightGroup */
+  .rightGroup {
+    display: flex;
+    margin-left: auto; /* Прижимает группу вправо */
+  }
+
+  /* Дополнительные стили для мобильных */
+  .themeButton {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--text-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: var(--spacing-sm);
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .rightGroup {
+    gap: var(--spacing-xs); /* Уменьшаем отступ между кнопками */
+  }
+
+  .themeButton {
+    min-width: 36px;
+    min-height: 36px;
+    padding: var(--spacing-xs);
+    font-size: var(--text-sm);
+  }
+
+  .burgerButton {
+    width: 26px;
+    height: 20px;
+  }
+
+  .burgerLine {
+    height: 2px;
+  }
+}
