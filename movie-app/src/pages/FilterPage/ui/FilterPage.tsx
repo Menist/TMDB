@@ -152,13 +152,14 @@ export const FilterPage = () => {
             <span>{minRating.toFixed(1)} - {maxRating.toFixed(1)}</span>
           </div>
           <div className={s.ratingInputs}>
-            <input
+             <input
               type="range"
               min="0"
               max="10"
               step="0.1"
               value={minRating}
               onChange={(e) => setMinRating(Number(e.target.value))}
+              aria-label="Минимальный рейтинг"
             />
             <input
               type="range"
@@ -167,6 +168,7 @@ export const FilterPage = () => {
               step="0.1"
               value={maxRating}
               onChange={(e) => setMaxRating(Number(e.target.value))}
+              aria-label="Максима рейтинг"
             />
           </div>
         </div>
