@@ -173,13 +173,15 @@ export const FilterPage = () => {
           </div>
         </div>
 
-        <div className={s.filterGroup}>
-          <label>Год выпуска:</label>
+         <div className={s.filterGroup}>
+          <label htmlFor="year-input">Год выпуска:</label>
           <input
+            id="year-input"
             type="number"
             placeholder="2023"
             value={selectedYear || ''}
             onChange={(e) => setSelectedYear(Number(e.target.value) || null)}
+            aria-label="Год выпуска"
           />
         </div>
 
@@ -188,8 +190,6 @@ export const FilterPage = () => {
           <Button variant="secondary" onClick={handleReset}>Сбросить</Button>
         </div>
       </div>
-
-
         <>
           <h1>{hasSearched ? 'Filtered Movies' : 'Popular Movies'}</h1>
           {activeIsFetching && !activeIsFetchingNext && (
