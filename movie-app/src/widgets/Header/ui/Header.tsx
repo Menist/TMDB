@@ -66,6 +66,7 @@ export const Header = () => {
             <Button
               onClick={handlerBtnTheme}
               className={s.themeButton}
+              aria-label={theme.themeMode === 'dark' ? 'Переключить на светлую тему' : 'Переключить на тёмную тему'}
             >
               {theme.themeMode === 'dark' ? '☀️' : '🌙'}
             </Button>
