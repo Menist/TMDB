@@ -1,12 +1,12 @@
-import {useGetPopularMoviesInfiniteQuery} from "../../../entities/movie/api/movieApi";
-import {Input} from "../../../shared/ui/Input";
-import {Button} from "../../../shared/ui/Button";
+import {useGetPopularMoviesInfiniteQuery} from "@/entities/movie/api/movieApi";
+import {Input} from "@/shared/ui/Input";
+import {Button} from "@/shared/ui/Button";
 import {useNavigate} from "react-router-dom";
 import type {FormEvent} from "react";
 import {useEffect} from "react";
 import {useState} from "react";
 import s from './WelcomeSection.module.css'
-import type {Movie} from "../../../entities/movie/model/schemas";
+import type {Movie} from "@/entities/movie/model/schemas";
 
 export const WelcomeSection = () => {
   const {data} = useGetPopularMoviesInfiniteQuery()
