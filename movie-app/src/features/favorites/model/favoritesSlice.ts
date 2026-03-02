@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
-import type { Movie } from "@/entities/movie/model/types"
+import type {Movie} from "@/entities/movie/model/schemas";
 
 type FavoritesState = {
   movies: Movie[]
