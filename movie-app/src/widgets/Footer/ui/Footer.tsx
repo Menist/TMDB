@@ -4,7 +4,7 @@ export const Footer = () => {
 
   return (
     <footer className={s.wrapFooter}>
-      <p>© {currentYear} TMDB Clone. All rights reserved.</p>
+      <p>© {currentYear} TMDB. All rights reserved.</p>
     </footer>
   );
 };
